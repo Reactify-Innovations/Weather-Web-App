@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Informer</title>
+
+  <!-- Custom Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/IMAGES/favicon/favicon.png" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+
+  <!-- Custom Icon's -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Input Field  section-->
+
+    <form id="myForm">
+      <button id="searchBtn"><i class="bx bx-search bx-tada"></i></button>
+      <input type="text" placeholder="Search Location" id="inputField" />
+      <p id="text">&#9888; Please enter location!</p>
+    </form>
+
+    <!-- Weather  Info's section -->
+    <div class="weatherInfo">
+
+      <!-- current Weather and next days forecast section-->
+
+      <div class="currentWeatherForecast">
+
+        <!-- current weather section -->
+
+        <div class="currentWeather">
+
+          <div class="nameTime">
+            <span id="weatherName">Name</span>
+            <span id="currentTime">00:00</span>
+          </div>
+
+          <div class="info">
+            <div id="id">
+              <!-- <img src="" alt="" height="100px"> -->
+            </div>
+            <div class="tempDesc">
+              <span class="degree">&#0176C</span>
+              <span id="temp">0 </span> 
+              <span id="desc"></span>
+            </div>
+          </div>
+
+          <div class="humidAir">
+            <div id="humidImg"><img src="/IMAGES/levels/humidity.png" alt="" height="30px">
+              <div class="flows">
+                <span class="humidity">Humidity</span>
+                <span class="num" id="humid"></span>
+              </div>
+            </div>
+
+            <div id="airSpeed"><img src="/IMAGES/levels/air-flow.png" alt="" height="30px">
+              <div class="flows">
+                <span class="speed">Air Speed</span>
+                <span class="num" id="speed"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Forecast Display of next days section-->
+
+        <div class="forecast" id="forecastContainer">
+          <span class="name">Forecast</span>
+            <ul id="forecastBox"> </ul>
+        </div>
+      </div>
+
+
+      <div class="locationAndSummery">
+        <!-- location And Popular cities section -->
+        <div class="loca-city">
+          
+          <!-- location -->
+          <div class="location">
+            <div id="map"></div>
+          </div>
+
+          <!-- Popular Cities -->
+          <div class="city">
+            <span>Popular Cities</span>
+
+            <ul id="popularCitiesContainer"></ul>
+          </div>
+
+        </div>
+
+        <!-- summery of the day -->
+        <div class="summary">
+          Weather Summary
+          <div class="weather-summary">
+            <span id="location">Location Name</span>
+            <div class="day-summary">
+              <div class="weather-period" id="morning">
+                <h3>06:00 AM</h3>
+                <p id="morning-temp">Temp: --°C</p>
+              </div>
+              <div class="weather-period" id="noon">
+                <h3>12:00 PM</h3>
+                <p id="noon-temp">Temp: --°C</p>
+              </div>
+              <div class="weather-period" id="afternoon">
+                <h3>03:00 PM</h3>
+                <p id="afternoon-temp">Temp: --°C</p>
+              </div>
+              <div class="weather-period" id="evening">
+                <h3>06:00 PM</h3>
+                <p id="evening-temp">Temp: --°C</p>
+              </div>
+              <div class="weather-period" id="night">
+                <h3>09:00 PM</h3>
+                <p id="night-temp">Temp: --°C</p>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS FILE -->
+  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+  
+  <script src="./script.js"></script>
+</body>
+
+</html>
