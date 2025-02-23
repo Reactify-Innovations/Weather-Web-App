@@ -168,7 +168,7 @@ function convertTimezone(data) {
 }
 
 // ----------------------------------------------------------------------------------------------------
-//  5. Displaying Weather Icon and Changing backgroung Image and background color by using DOM
+//  5. Displaying Weather Icon and Changing background Image and background color by using DOM
 
 function getWeatherIcon(data) {
   const {
@@ -178,74 +178,74 @@ function getWeatherIcon(data) {
   let iconSrc = "";
   switch (true) {
     case weatherId >= 200 && weatherId < 300:
-      document.body.style.backgroundImage = "url('/IMAGES/groups/Group-200.jpg')";
+      document.body.style.backgroundImage = "url('./IMAGES/groups/Group-200.jpg')";
       box.style.background = "hsla(217, 35%, 24%, 0.5)";
-      iconSrc = "/IMAGES/ids/200.png";
+      iconSrc = "./IMAGES/ids/200.png";
       return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Thunderstorm" height="100px">`);
     case weatherId >= 300 && weatherId < 500:
-      document.body.style.backgroundImage = "url('/IMAGES/groups/Group-300.jpg')";
+      document.body.style.backgroundImage = "url('./IMAGES/groups/Group-300.jpg')";
       box.style.background = "hsla(195, 29%, 68%, 0.3)";
-      iconSrc = "/IMAGES/ids/300.png";
+      iconSrc = "./IMAGES/ids/300.png";
       return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Drizzles" height="100px">`);
     case weatherId >= 500 && weatherId < 600:
-      document.body.style.backgroundImage = "url('/IMAGES/groups/Group-500.jpg')";
+      document.body.style.backgroundImage = "url('./IMAGES/groups/Group-500.jpg')";
       box.style.background = "hsla(131, 32%, 20%, 0.2)";
-      iconSrc = "/IMAGES/ids/500.png";
+      iconSrc = "./IMAGES/ids/500.png";
       return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Rain" height="100px">`);
       case weatherId >= 600 && weatherId < 700:
         if(icon.endsWith("d")) {
-            document.body.style.backgroundImage = "url('/IMAGES/Group-600\ day.jpg')";
+            document.body.style.backgroundImage = "url('./IMAGES/Group-600\ day.jpg')";
             box.style.background = "hsla(206, 24%, 87%, .1)";
-            iconSrc = "/IMAGES/ids/600.png";
+            iconSrc = "./IMAGES/ids/600.png";
             return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Clear-Day" height="100px">`);
         } else {
-            document.body.style.backgroundImage = "url('/IMAGES/Group-600\ night.jpg')";
+            document.body.style.backgroundImage = "url('./IMAGES/Group-600\ night.jpg')";
             box.style.background = "hsla(208, 42%, 36%, 0.3)";
-            iconSrc = "/IMAGES/ids/600.png";
+            iconSrc = "./IMAGES/ids/600.png";
             return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Clear-Night" height="100px">`);
         }
     
     case weatherId >= 700 && weatherId < 799:
         if(icon.endsWith("d")) {
-            document.body.style.backgroundImage = "url('/IMAGES/groups/Group-700\ day.jpg')";
+            document.body.style.backgroundImage = "url('./IMAGES/groups/Group-700\ day.jpg')";
             box.style.background = "hsla(240, 1%, 59%, .5)";
-            iconSrc = "/IMAGES/ids/700-day.png";
+            iconSrc = "./IMAGES/ids/700-day.png";
             return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Clear-Day" height="100px">`);
         }else {
-          document.body.style.backgroundImage = "url('/IMAGES/groups/Group-700\ night.jpg')";
+          document.body.style.backgroundImage = "url('./IMAGES/groups/Group-700\ night.jpg')";
               box.style.background = "hsla(27, 11%, 16%, 0.3)";
               
-              iconSrc = "/IMAGES/ids/700-night.png";
+              iconSrc = "./IMAGES/ids/700-night.png";
               return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Clear-Day" height="100px">`);
         }
     case weatherId === 800:
       if(icon.endsWith("d")) {
-          document.body.style.backgroundImage = "url('/IMAGES/groups/Group-800\ day.jpg')";
+          document.body.style.backgroundImage = "url('./IMAGES/groups/Group-800\ day.jpg')";
           box.style.background = "hsla(218, 80%, 27%, 0.3)";
-          iconSrc = "/IMAGES/ids/800-day.png";
+          iconSrc = "./IMAGES/ids/800-day.png";
           return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Clear-Day" height="100px">`);
       }else {
-        document.body.style.backgroundImage = "url('/IMAGES/groups/Group-800\ night.jpg')";
+        document.body.style.backgroundImage = "url('./IMAGES/groups/Group-800\ night.jpg')";
             box.style.background = "linear-gradient(180deg, hsla(223, 92%, 9%, 0.5), hsla(71, 50%, 13%, 0.4)";
-            iconSrc = "/IMAGES/ids/800-night.png";
+            iconSrc = "./IMAGES/ids/800-night.png";
             return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Clear-Day" height="100px">`);
       }
     case weatherId > 800:
         if(icon.endsWith("d")) {
-            document.body.style.backgroundImage = "url('/IMAGES/groups/Group-800++\ day.jpg')";
+            document.body.style.backgroundImage = "url('./IMAGES/groups/Group-800++\ day.jpg')";
             box.style.background = "hsla(214, 61%, 59%, .3)";
-            iconSrc = "/IMAGES/ids/800+day.png";
+            iconSrc = "./IMAGES/ids/800+day.png";
             return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Clear-Day" height="100px">`);
         }else {
-            document.body.style.backgroundImage = "url('/IMAGES/groups/Group-800++\ night.jpg')";
+            document.body.style.backgroundImage = "url('./IMAGES/groups/Group-800++\ night.jpg')";
             box.style.background = "hsla(214, 20%, 28%, .5)";
-              iconSrc = "/IMAGES/ids/800+night.png";
+              iconSrc = "./IMAGES/ids/800+night.png";
               return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Clear-Day" height="100px">`);
         }
         default : 
-        document.body.style.backgroundImage = "url('/IMAGES/groups/800\ day.jpg')";
+        document.body.style.backgroundImage = "url('./IMAGES/groups/800\ day.jpg')";
             box.style.background = "balck";
-        iconSrc = "/IMAGES/ids/default.png"
+        iconSrc = "./IMAGES/ids/default.png"
         return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Default" height="100px">`);
   }
 }
@@ -336,28 +336,28 @@ function getForecastEmoji(forecastId, forecastIcon) {
   let iconSrc = "";
   switch(true) {
     case forecastId >= 200 && forecastId < 300:
-      iconSrc = "/IMAGES/ids/200.png";
+      iconSrc = "./IMAGES/ids/200.png";
     break;
     case forecastId >= 300 && forecastId < 500:
-      iconSrc = "/IMAGES/ids/300.png";
+      iconSrc = "./IMAGES/ids/300.png";
       break;
     case forecastId >= 500 && forecastId < 600:
-      iconSrc = "/IMAGES/ids/500.png";
+      iconSrc = "./IMAGES/ids/500.png";
       break;
     case forecastId >= 600 && forecastId < 700:
-      iconSrc = "/IMAGES/ids/600-day.png";
+      iconSrc = "./IMAGES/ids/600-day.png";
       break;
     case forecastId >= 700 && forecastId < 799:
-      iconSrc = forecastIcon.endsWith('d') ? "/IMAGES/ids/700-day.png" : "/IMAGES/ids/700-night.png";
+      iconSrc = forecastIcon.endsWith('d') ? "./IMAGES/ids/700-day.png" : "./IMAGES/ids/700-night.png";
       break;
     case forecastId === 800:
-      iconSrc = forecastIcon.endsWith('d') ? "/IMAGES/ids/800-day.png" : "/IMAGES/ids/800-night.png"
+      iconSrc = forecastIcon.endsWith('d') ? "./IMAGES/ids/800-day.png" : "./IMAGES/ids/800-night.png"
       break; 
     case forecastId > 800:
-      iconSrc = forecastIcon.endsWith('d') ? "/IMAGES/ids/800+day.png" :  "/IMAGES/ids/800+night.png";
+      iconSrc = forecastIcon.endsWith('d') ? "./IMAGES/ids/800+day.png" :  "./IMAGES/ids/800+night.png";
       break;    
     default :
-        iconSrc = "/IMAGES/ids/default.png"
+        iconSrc = "./IMAGES/ids/default.png"
   }
   return iconSrc;
 };
