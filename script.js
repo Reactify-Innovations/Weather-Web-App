@@ -194,12 +194,12 @@ function getWeatherIcon(data) {
       return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Rain" height="100px">`);
       case weatherId >= 600 && weatherId < 700:
         if(icon.endsWith("d")) {
-            document.body.style.backgroundImage = "url('./IMAGES/Group-600\ day.jpg')";
+            document.body.style.backgroundImage = "url('./IMAGES/groups/Group-600\ day.jpg')";
             box.style.background = "hsla(206, 24%, 87%, .1)";
             iconSrc = "./IMAGES/ids/600.png";
             return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Clear-Day" height="100px">`);
         } else {
-            document.body.style.backgroundImage = "url('./IMAGES/Group-600\ night.jpg')";
+            document.body.style.backgroundImage = "url('./IMAGES/groups/Group-600\ night.jpg')";
             box.style.background = "hsla(208, 42%, 36%, 0.3)";
             iconSrc = "./IMAGES/ids/600.png";
             return (mainIcon.innerHTML = `<img src="${iconSrc}" alt="Clear-Night" height="100px">`);
