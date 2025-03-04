@@ -334,6 +334,7 @@ body {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, .4);
     border-radius: 10px !important;
     margin-right: 1rem;
+    overflow: hidded;
 }
 
 .location #map {
